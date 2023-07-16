@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 class AbstractQueue(ABC):
     @abstractmethod
     def __len__(self):
+        
         raise NotImplementedError
 
     @abstractmethod
