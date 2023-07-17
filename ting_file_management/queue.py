@@ -12,8 +12,10 @@ class Queue(AbstractQueue):
         self.data.append(value)
 
     def dequeue(self):
-        self.data.pop()
-        return self.data[0]
+        if len(self.data) == 0:
+            return None
+        else:
+            return self.data.pop(0)
 
     def search(self, index):
         if (index >= len(self.data) or index < 0):
